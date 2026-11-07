@@ -7,11 +7,11 @@
     if (document.querySelector('.bw-wa-chip')) return;
     var a = document.createElement('a');
     a.className = 'bw-wa-chip';
-    a.href = 'https://wa.me/966541102224?text=' + encodeURIComponent('مرحباً، أسأل عن تأجير وحدة في منطقة المكسيك – منطقة التجارة الرائجة ببوليفارد وورلد.');
+    a.href = 'https://wa.me/966541102224';
     a.target = '_blank';
     a.rel = 'noreferrer';
     a.setAttribute('aria-label', 'واتساب التأجير');
-    a.innerHTML = '<span class="bw-wa-chip__dot" aria-hidden="true"></span><span>واتساب التأجير · 054 110 2224</span>';
+    a.innerHTML = '<span class="bw-wa-chip__dot" aria-hidden="true"></span><span>واتساب التأجير · 0541102224</span>';
     document.body.appendChild(a);
   }
 
@@ -468,6 +468,7 @@
 
   function run() {
     try {
+      ensureWaChip();
       var path = location.pathname;
       if (path !== lastPath) {
         clearEnergy();
